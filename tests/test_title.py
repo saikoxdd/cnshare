@@ -13,7 +13,10 @@ XHS = "86 小红书 发布了一篇小红书笔记，快来看吧！ 😆 Xyz123
 
 
 def test_poizon_title_after_link():
-    assert parse(POIZON).title == "Champion T头德训鞋 Champ T-trainer 百搭潮流时尚休闲舒适 低帮 板鞋 男款 牛津绿/奶白"
+    assert (
+        parse(POIZON).title
+        == "Champion T头德训鞋 Champ T-trainer 百搭潮流时尚休闲舒适 低帮 板鞋 男款 牛津绿/奶白"
+    )
 
 
 def test_taobao_brackets():

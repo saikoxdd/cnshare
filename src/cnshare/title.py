@@ -37,5 +37,5 @@ def extract_title(text: str, url: str, limit: int = 300) -> str | None:
     pos = text.find(url)
     if pos < 0:
         return None
-    after = text[pos + len(url):]
+    after = text[pos + len(url) :]
     return _clean(_TAIL.split(after, maxsplit=1)[0], limit)

@@ -41,4 +41,4 @@ def test_no_links():
 
 def test_parse_all_keeps_order():
     links = parse_all("https://m.tb.cn/h.1 и https://3.cn/2")
-    assert [l.platform.key for l in links] == ["taobao", "jd"]
+    assert [link.platform.key for link in links] == ["taobao", "jd"]
