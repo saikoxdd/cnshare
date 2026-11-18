@@ -54,7 +54,7 @@ pip install git+https://github.com/saikoxdd/cnshare
 
 ## API
 
-```python
+```text
 from cnshare import parse, parse_all, find_urls, detect_platform, item_id, canonical_url
 
 parse(text)          # ShareLink | None - the product link
