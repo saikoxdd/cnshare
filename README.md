@@ -89,6 +89,10 @@ $ pbpaste | cnshare -u        # just the URL
 $ cnshare --all "…"           # every link in the text
 ```
 
+## Examples
+
+[`examples/`](examples) has a ready aiogram 3 bot that answers pasted share text, and a one-line macOS clipboard helper.
+
 ## Development
 
 ```bash
