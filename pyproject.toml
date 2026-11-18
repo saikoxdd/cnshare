@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cnshare"
+version = "0.0.1"
+description = "Extract product links, platform and title from Chinese marketplace share texts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Saiko", email = "197813765+saikoxdd@users.noreply.github.com" }]
+keywords = ["poizon", "dewu", "taobao", "jd", "pinduoduo", "xiaohongshu", "share", "url", "parser"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Text Processing",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/saikoxdd/cnshare"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cnshare"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
