@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from urllib.parse import urlsplit
 
-__all__ = ["Platform", "PLATFORMS", "detect_platform"]
+__all__ = ["PLATFORMS", "Platform", "detect_platform"]
 
 
 @dataclass(frozen=True)

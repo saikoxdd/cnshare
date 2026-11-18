@@ -27,7 +27,14 @@ def test_detect(url, key):
 
 @pytest.mark.parametrize(
     "url",
-    ["https://notb.cn/x", "https://taobao.com.evil.example/x", "https://example.com", "not a url", "", "http://[::1"],
+    [
+        "https://notb.cn/x",
+        "https://taobao.com.evil.example/x",
+        "https://example.com",
+        "not a url",
+        "",
+        "http://[::1",
+    ],
 )
 def test_unknown(url):
     assert detect_platform(url) is None
