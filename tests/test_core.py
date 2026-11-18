@@ -9,7 +9,8 @@ XHS = "86 小红书 发布了一篇小红书笔记，快来看吧！ 😆 Xyz123
 
 def test_poizon():
     link = parse(POIZON)
-    assert link == ShareLink("https://dw4.co/t/A/HnT1or9oV", link.platform)
+    assert isinstance(link, ShareLink)
+    assert link.url == "https://dw4.co/t/A/HnT1or9oV"
     assert link.platform.key == "poizon"
 
 

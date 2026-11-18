@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 from .extract import find_urls
 from .platforms import Platform, detect_platform
+from .title import extract_title
 
 __all__ = ["ShareLink", "parse", "parse_all"]
 
@@ -16,6 +17,7 @@ class ShareLink:
 
     url: str
     platform: Platform | None
+    title: str | None = None
 
     @property
     def is_known(self) -> bool:
@@ -35,7 +37,7 @@ def parse_all(text: str) -> list[ShareLink]:
     links = []
     for url in find_urls(text):
         platform = detect_platform(url)
-        links.append(ShareLink(_normalize(url, platform), platform))
+        links.append(ShareLink(_normalize(url, platform), platform, extract_title(text, url)))
     return links
 
 
