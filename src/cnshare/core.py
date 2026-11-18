@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from .extract import find_urls
+from .items import canonical_url, item_id
 from .platforms import Platform, detect_platform
 from .title import extract_title
 
@@ -22,6 +23,16 @@ class ShareLink:
     @property
     def is_known(self) -> bool:
         return self.platform is not None
+
+    @property
+    def item_id(self) -> str | None:
+        """Product ID for full product URLs (``None`` for short links)."""
+        return item_id(self.url)
+
+    @property
+    def canonical_url(self) -> str | None:
+        """Product URL without tracking parameters, when the ID is known."""
+        return canonical_url(self.url)
 
 
 def _normalize(url: str, platform: Platform | None) -> str:
