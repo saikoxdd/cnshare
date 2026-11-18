@@ -18,6 +18,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.scripts]
+cnshare = "cnshare.cli:main"
+
 [project.urls]
 Homepage = "https://github.com/saikoxdd/cnshare"
 
